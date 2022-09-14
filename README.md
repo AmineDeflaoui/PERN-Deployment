@@ -242,6 +242,7 @@ Upload your frontend and backend source code to GitHub repository.
     sudo cat /etc/passwd
 #### Switch to postgres user
     sudo -i -u postgres
+####     
     psql
 #### For this tutorial, the node process will be run under the ubuntu user and for the sake of simplicity, an ubuntu user will be created on Postgres as well. If you want to use a different user feel free to create a different user in postgres.
 #### To create a Postgres user run the following command which will give an interactive prompt for configuring the new user. For the sake of simplicity, the ubuntu user will be a superuser, which is the equivalent of being a root user on Linux.
