@@ -107,11 +107,11 @@ Upload your frontend and backend source code to GitHub repository.
     cd frontend-app && npm install
 #### Let’s bundle our code for production using this command.
 #### Checking the System for Swap Information
-    sudo swapon –show
+    sudo swapon -show
 #### You can verify that there is no active swap using the free utility
-    free –h
+    free -h
 #### Checking Available Space on the Hard Drive Partition
-    df –h
+    df -h
 #### Creating a Swap File
     sudo fallocate -l 1G /swapfile
 #### We can verify that the correct amount of space was reserved by typing
@@ -125,9 +125,9 @@ Upload your frontend and backend source code to GitHub repository.
 #### we can enable the swap file, allowing our system to start utilizing it:
     sudo swapon /swapfile
 #### 
-    sudo swapon –show
+    sudo swapon -show
 #### 
-    free –h
+    free -h
 #### Making the Swap File Permanent
     sudo cp /etc/fstab /etc/fstab.bak
 #### Add the swap file information to the end of your /etc/fstab file by typing:
