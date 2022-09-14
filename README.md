@@ -84,7 +84,7 @@ Different applications can register their profiles with UFW upon installation.
 #### 
     apt clean all && sudo apt update
 #### Install Nginx:
-    sudo apt-get install nginx –y
+    sudo apt-get install nginx -y
 #### 
     sudo systemctl enable nginx
 #### verify nginx status
