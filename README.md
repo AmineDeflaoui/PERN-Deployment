@@ -107,7 +107,7 @@ Upload your frontend and backend source code to GitHub repository.
     cd frontend-app && npm install
 #### Let’s bundle our code for production using this command.
 #### Checking the System for Swap Information
-    sudo swapon -show
+    sudo swapon --show
 #### You can verify that there is no active swap using the free utility
     free -h
 #### Checking Available Space on the Hard Drive Partition
@@ -125,7 +125,7 @@ Upload your frontend and backend source code to GitHub repository.
 #### we can enable the swap file, allowing our system to start utilizing it:
     sudo swapon /swapfile
 #### 
-    sudo swapon -show
+    sudo swapon --show
 #### 
     free -h
 #### Making the Swap File Permanent
