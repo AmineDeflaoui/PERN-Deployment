@@ -148,7 +148,7 @@ Upload your frontend and backend source code to GitHub repository.
     sudo nano /etc/sysctl.conf
 #### 
     vm.vfs_cache_pressure=50
-#### **IF Node.js heap out of memory**
+#### ``` ! **IF Node.js heap out of memory** ```
 #### you want to increase the memory usage of the node globally - not only single script, you can export environment variable, like this:
     export NODE_OPTIONS=--max_old_space_size=4096
 #### 
@@ -289,6 +289,7 @@ Upload your frontend and backend source code to GitHub repository.
 #### We now need to make sure that all of the proper environment variables are setup on our production Ubuntu Server. In our development environment, we made use of a package called dotenv to load up environment variables. In the production environment the environment variables are going to be set on the OS instead of within Node.
 #### Create a file called .env in /home/ubuntu/. The file does not need to be named .env and it does not need to be stored in /home/ubuntu, these were just the name/location of my choosing. The only thing I recommend avoid doing is placing the file in the same directory as the app code as we want to make sure we don't accidentally check our environment variables into git and end up exposing our credentials.
     source .env
+#### 
     printenv 
 #### You'll notice I also set 
     NODE_ENV=production
@@ -297,4 +298,3 @@ Upload your frontend and backend source code to GitHub repository.
     set -o allexport; source /home/amine/theclassmap/.env; set +o allexport
 #### For these changes to take effect, close the current terminal session and open a new one.
 #### Verify that the environment variables are set by running the printenv
-
