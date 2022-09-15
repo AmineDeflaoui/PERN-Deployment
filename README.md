@@ -165,7 +165,7 @@ Upload your frontend and backend source code to GitHub repository.
 #### It’s time to use our process management tool (PM2).
     cd backend-app
 #### 
-    pm2 start /folder/folderapp.js –name [name]
+    pm2 start /folder/folderapp.js --name [name]
 #### Now, pm2 will keep your application alive.
 #### to stop process :
     pm2 stop [name | id]
