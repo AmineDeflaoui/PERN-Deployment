@@ -253,6 +253,7 @@ Upload your frontend and backend source code to GitHub repository.
     \du
 #### To log in as user to psql use following syntax because postgres uses normally the user name the same as database so psql will access postgres database that’s why we use following syntax:
     psql -d postgres
+####     
     \conninfo
 #### To create a password for db user
     ALTER USER ubuntu PASSWORD 'password';
