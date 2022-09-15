@@ -148,8 +148,8 @@ Upload your frontend and backend source code to GitHub repository.
     sudo nano /etc/sysctl.conf
 #### 
     vm.vfs_cache_pressure=50
-```diff
-! ##### **IF Node.js heap out of memory**
+#### ```diff
+! **IF Node.js heap out of memory**
 ```
 #### you want to increase the memory usage of the node globally - not only single script, you can export environment variable, like this:
     export NODE_OPTIONS=--max_old_space_size=4096
