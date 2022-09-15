@@ -94,6 +94,7 @@ Different applications can register their profiles with UFW upon installation.
 ## 5.About My App:
 #### My node.js is running on port 3001 and react application is running on port 3000.
 Upload your frontend and backend source code to GitHub repository.
+
 ## 6.Application cloning:
 ### a.Node.js:
 #### Clone your backend project from GitHub.
@@ -155,6 +156,8 @@ Upload your frontend and backend source code to GitHub repository.
     export NODE_OPTIONS=--max_old_space_size=4096
 #### 
     npm run build
+#### if the problem still exists scp the build directory from localmachine
+    scp -r build/ root@165.227.159.135:/home/amine/theclassmap/Client-The-ClassMap/build
 
 ## 7.Hosting Application
 #### Hosting node.js application using PM2
