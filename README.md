@@ -1,4 +1,4 @@
-# *Full Stack Web Application (PERN) Deployment*
+# **Full Stack Web Application (PERN) Deployment**
 
 ## 1.Domain Purchase:
 #### Purchase domain from Name cheap.
