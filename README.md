@@ -215,6 +215,25 @@ Upload your frontend and backend source code to GitHub repository.
     proxy_cache_bypass $http_upgrade;
     }
     }
+#### Cache-Control headers on Nginx
+    location ~* \.(png|jpg|jpeg|gif)$ {
+    expires 365d;
+    add_header Cache-Control "public, no-transform";
+    }
+    
+    location ~* \.(js|css|pdf|html|swf)$ {
+    expires 30d;
+    add_header Cache-Control "public, no-transform";
+    }
+#### configure gzip compression with NGINX
+####  Open up the file /etc/nginx/nginx.conf
+#### replace 'gzip on;' with :
+    gzip on;
+    gzip_vary on;
+    gzip_min_length 10240;
+    gzip_proxied expired no-cache no-store private auth;
+    gzip_types text/plain text/css text/xml text/javascript application/x-javascript application/xml;
+    gzip_disable "MSIE [1-6]\.";
 #### server_name will be your dropletIP for which it will listen for requests.
 #### then I am checking If there is any match for /api in the request, then forward the request to localhost:3001/ where our node.js server is running.
 #### Otherwise map the url to the file(index.html) located at /home/frontend-app/dist/
