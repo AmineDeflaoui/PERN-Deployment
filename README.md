@@ -225,6 +225,11 @@ Upload your frontend and backend source code to GitHub repository.
     expires 30d;
     add_header Cache-Control "public, no-transform";
     }
+#### Redirect theclassmap.com www.theclassmap.com
+#### we need to add an if statement inside of the https server as following :
+    if ($host = theclassmap.com){
+        return 301 https://www.$host$request_uri;
+    }
 #### configure gzip compression with NGINX
 ####  Open up the file /etc/nginx/nginx.conf
 #### replace 'gzip on;' with :
