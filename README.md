@@ -217,6 +217,7 @@ Upload your frontend and backend source code to GitHub repository.
     }
     }
 #### Cache-Control headers on Nginx
+#### add also security headers, note that headers wont works in other locations because an add header exists in this location, thus we added them here.
     location ~* \.(png|jpg|jpeg|gif)$ {
     expires 365d;
     add_header Cache-Control "public, no-transform";
@@ -225,6 +226,14 @@ Upload your frontend and backend source code to GitHub repository.
     location ~* \.(js|css|pdf|html|swf)$ {
     expires 30d;
     add_header Cache-Control "public, no-transform";
+    add_header Strict-Transport-Security 'max-age=31536000; includeSubDomains; preload';
+    add_header Content-Security-Policy "default-src 'self'; font-src *;img-src * data:; script-src *; style-src *";
+    add_header X-Content-Type-Options nosniff;
+    add_header X-Frame-Options "SAMEORIGIN";
+    add_header X-XSS-Protection "1; mode=block";
+    add_header Referrer-Policy "strict-origin";
+    add_header Permissions-Policy "sync-xhr=(),magnetometer=(),gyroscope=(),fullscreen=(self),payment=()";
+
     }
 #### Redirect theclassmap.com www.theclassmap.com
 #### we need to add an if statement inside of the https server as following :
