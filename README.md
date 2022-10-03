@@ -337,3 +337,17 @@ Upload your frontend and backend source code to GitHub repository.
     set -o allexport; source /home/amine/theclassmap/.env; set +o allexport
 #### For these changes to take effect, close the current terminal session and open a new one.
 #### Verify that the environment variables are set by running the printenv
+#### 13.Remote access to PostgreSQL DataBase
+    apt install postgresql postgresql-contrib
+#### enable postgres to start automatically
+    update-rc.d postgresql enable
+#### start postgres
+    service postgresql start
+#### change postgres config files
+    cd /etc/postgresql/[version]/main 
+#### edit pg_hba.conf add new line at the end
+    host    all     all     [ipAddress]     md5
+#### edit postgresql.conf change address line
+    listen_addresses = '*'
+#### restart postgres
+    service postgresql restart
