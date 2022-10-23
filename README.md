@@ -351,3 +351,9 @@ Upload your frontend and backend source code to GitHub repository.
     listen_addresses = '*'
 #### restart postgres
     service postgresql restart
+#### set firewall :
+    ufw status numbered
+#### select number to delete : 
+    ufw delete [number]
+#### allow new IP address :
+    ufw allow from [IP address] to any port [port number]
